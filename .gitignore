@@ -1,2 +1,12 @@
 # ignore .pyc files
 *.pyc
+
+# ignore coverage stats
+.coverage
+
+# ignore ipython checkpoints
+.ipynb_checkpoints/
+
+# ignore .dta files
+*.dta
+
