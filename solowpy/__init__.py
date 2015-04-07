@@ -1,7 +1,7 @@
 """
 models directory imports
 
-objects imported here will live in the `quantecon.models.solow` namespace
+objects imported here will live in the `solowpy` namespace
 
 """
 __all__ = ['Model', 'CobbDouglasModel', 'CESModel']

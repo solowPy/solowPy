@@ -23,6 +23,7 @@ before_install:
 install:
   - conda install --yes python=$TRAVIS_PYTHON_VERSION numpy scipy nose pandas pip sympy matplotlib
   - pip install coveralls coverage
+  - pip install quantecon
   - python setup.py install
   - cp solowpy/tests/matplotlibrc .
 
