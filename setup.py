@@ -12,7 +12,7 @@ def write_version_py(filename=None):
     doc += "\nversion = '%s'" % VERSION
     
     if not filename:
-        filename = os.path.join(os.path.dirname(__file__), 'quantecon', 'version.py')
+        filename = os.path.join(os.path.dirname(__file__), 'solowpy', 'version.py')
     
     fl = open(filename, 'w')
     try:
@@ -28,7 +28,7 @@ write_version_py()  # This is a file used to control the solowpy.__version__ att
 
 setup(
     name="solowPy",
-    version=solowpy.__version__,
+    version=VERSION,
     license="MIT License",
     author="davidrpugh",
     install_requires=["numpy",
