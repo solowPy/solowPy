@@ -24,9 +24,10 @@ install:
   - conda install --yes python=$TRAVIS_PYTHON_VERSION numpy scipy nose pandas pip sympy matplotlib
   - pip install coveralls coverage
   - python setup.py install
+  - cp solowpy/tests/matplotlibrc .
 
 script:
-  - nosetests --with-coverage --cover-package=solowPy
+  - nosetests --with-coverage --cover-package=solowpy
 
 after_success:
   - coveralls
