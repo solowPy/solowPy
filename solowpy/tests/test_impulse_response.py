@@ -10,7 +10,7 @@ import nose
 import matplotlib.pyplot as plt
 import numpy as np
 
-from .... models.solow import cobb_douglas
+from .. import cobb_douglas
 
 params = {'A0': 1.0, 'g': 0.02, 'L0': 1.0, 'n': 0.02, 's': 0.15,
           'alpha': 0.33, 'delta': 0.05}

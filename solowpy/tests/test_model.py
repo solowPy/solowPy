@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sympy as sym
 
-from .... models import solow
+from .. import model
 
 # declare key variables for the model
 A, E, k, K, L = sym.symbols('A, E, k, K, L')
@@ -37,7 +37,7 @@ valid_params = {'A0': 1.0, 'g': 0.02, 'L0': 1.0, 'n': 0.02, 's': 0.15,
 # testing functions
 def test_plot_factor_shares():
     """Testing return type for plot_factor_shares."""
-    tmp_mod = solow.Model(output=valid_output, params=valid_params)
+    tmp_mod = model.Model(output=valid_output, params=valid_params)
     fig, ax = plt.subplots(1, 1)
     tmp_lines = tmp_mod.plot_factor_shares(ax)
     nose.tools.assert_is_instance(tmp_lines, list)
@@ -45,7 +45,7 @@ def test_plot_factor_shares():
 
 def test_plot_intensive_investment():
     """Testing return type for plot_intensive_investment."""
-    tmp_mod = solow.Model(output=valid_output, params=valid_params)
+    tmp_mod = model.Model(output=valid_output, params=valid_params)
     fig, ax = plt.subplots(1, 1)
     tmp_lines = tmp_mod.plot_intensive_investment(ax)
     nose.tools.assert_is_instance(tmp_lines, list)
@@ -53,7 +53,7 @@ def test_plot_intensive_investment():
 
 def test_plot_intensive_output():
     """Testing return type for plot_intensive_output."""
-    tmp_mod = solow.Model(output=valid_output, params=valid_params)
+    tmp_mod = model.Model(output=valid_output, params=valid_params)
     fig, ax = plt.subplots(1, 1)
     tmp_lines = tmp_mod.plot_intensive_output(ax)
     nose.tools.assert_is_instance(tmp_lines, list)
@@ -61,7 +61,7 @@ def test_plot_intensive_output():
 
 def test_plot_phase_diagram():
     """Testing return type for plot_phase_diagram."""
-    tmp_mod = solow.Model(output=valid_output, params=valid_params)
+    tmp_mod = model.Model(output=valid_output, params=valid_params)
     fig, ax = plt.subplots(1, 1)
     tmp_lines = tmp_mod.plot_phase_diagram(ax)
     nose.tools.assert_is_instance(tmp_lines, list)
@@ -69,7 +69,7 @@ def test_plot_phase_diagram():
 
 def test_plot_solow_diagram():
     """Testing return type for plot_solow_diagram."""
-    tmp_mod = solow.Model(output=valid_output, params=valid_params)
+    tmp_mod = model.Model(output=valid_output, params=valid_params)
     fig, ax = plt.subplots(1, 1)
     tmp_lines = tmp_mod.plot_solow_diagram(ax)
     nose.tools.assert_is_instance(tmp_lines, list)
@@ -79,11 +79,11 @@ def test_validate_output():
     """Testing validation of output attribute."""
     # output must have type sym.Basic
     with nose.tools.assert_raises(AttributeError):
-        solow.Model(output=invalid_output_1, params=valid_params)
+        model.Model(output=invalid_output_1, params=valid_params)
 
     # output must be function of K, A, L
     with nose.tools.assert_raises(AttributeError):
-        solow.Model(output=invalid_output_2, params=valid_params)
+        model.Model(output=invalid_output_2, params=valid_params)
 
 
 def test_validate_params():
@@ -103,23 +103,23 @@ def test_validate_params():
 
     # params must be a dict
     with nose.tools.assert_raises(AttributeError):
-        solow.Model(output=valid_output, params=invalid_params_0)
+        model.Model(output=valid_output, params=invalid_params_0)
 
     # effective depreciation rate must be positive
     with nose.tools.assert_raises(AttributeError):
-        solow.Model(output=valid_output, params=invalid_params_1)
+        model.Model(output=valid_output, params=invalid_params_1)
 
     # physical depreciation rate must be positive
     with nose.tools.assert_raises(AttributeError):
-        solow.Model(output=valid_output, params=invalid_params_2)
+        model.Model(output=valid_output, params=invalid_params_2)
 
     # savings rate must be positive
     with nose.tools.assert_raises(AttributeError):
-        solow.Model(output=valid_output, params=invalid_params_3)
+        model.Model(output=valid_output, params=invalid_params_3)
 
     # initial condition for A must be positive
     with nose.tools.assert_raises(AttributeError):
-        solow.Model(output=valid_output, params=invalid_params_4)
+        model.Model(output=valid_output, params=invalid_params_4)
 
 
 def test_evaluate_output_elasticity():
@@ -133,7 +133,7 @@ def test_evaluate_output_elasticity():
 
                         tmp_params = {'A0': 1.0, 'g': g, 'L0': 1.0, 'n': n,
                                       's': s, 'alpha': alpha, 'delta': delta}
-                        tmp_mod = solow.Model(output=valid_output,
+                        tmp_mod = model.Model(output=valid_output,
                                               params=tmp_params)
 
                         # use root finder to compute the steady state
