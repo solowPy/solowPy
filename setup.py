@@ -53,5 +53,6 @@ setup(
                       "quantecon",
                       ],
     author_email="david.pugh@maths.ox.ac.uk",
+    url='https://github.com/solowPy/solowPy',  # url to the repo
     classifiers=CLASSIFIERS
     )
