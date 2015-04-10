@@ -1,15 +1,18 @@
 from setuptools import setup
+import os
 
 # Write versions file
 VERSION = '0.1.0-alpha'
 
 
-def write_version_py(filename=None):
+def write_version_py():
     """ This constructs a version file for the project """
     doc = "\"\"\"This is a VERSION file and should NOT be manually altered!\"\"\""
     doc += "\nversion = '%s'" % VERSION
 
-    with open('solowpy/version.py', 'w') as fl:
+    filename = os.path.join(os.path.dirname(__file__), 'solowpy', 'version.py')
+
+    with open(filename, 'w+') as fl:
         fl.write(doc)
 
 write_version_py()  # used to control the solowpy.__version__ attribute
