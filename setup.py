@@ -1,4 +1,4 @@
-from setuptools import setup
+from disutils.core import setup
 
 # Meta information
 DESCRIPTION = ("Library for solving, simulating, and estimating the " +
@@ -20,17 +20,11 @@ CLASSIFIERS = ['Development Status :: 3 - Alpha',
 
 # Setup config
 setup(
-    name="solowPy",
-    version='0.1.1-alpha',
+    name="solowpy",
+    version='0.1.2-alpha',
     license="MIT License",
     author="davidrpugh",
     description=DESCRIPTION,
-    install_requires=["numpy",
-                      "scipy",
-                      "sympy",
-                      "pandas",
-                      "quantecon",
-                      ],
     author_email="david.pugh@maths.ox.ac.uk",
     url='https://github.com/solowPy/solowPy',  # url to the repo
     classifiers=CLASSIFIERS
