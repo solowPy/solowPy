@@ -12,3 +12,6 @@ from . cobb_douglas import CobbDouglasModel
 from . import cobb_douglas
 from . ces import CESModel
 from . import ces
+
+# Add Version Attribute
+from .version import version as __version__
