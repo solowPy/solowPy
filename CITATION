@@ -1,0 +1,8 @@
+@Manual{solowPy,
+        title = {\pkg{solowPy}: \proglang{Python} library for solving, simulating, and estimating the Solow model of economic growth},
+        author = {David R. Pugh},
+        organization = {solowPy},
+        year = {2015},
+        doi = {10.5281/zenodo.16720},
+        url = {https://github.com/solowPy/solowPy}
+        }
