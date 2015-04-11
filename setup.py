@@ -21,7 +21,9 @@ CLASSIFIERS = ['Development Status :: 3 - Alpha',
 # Setup config
 setup(
     name="solowpy",
-    version='0.1.2-alpha',
+    packages=['solowpy',
+              'solowpy.tests'],
+    version='0.1.3-alpha',
     license="MIT License",
     author="davidrpugh",
     description=DESCRIPTION,

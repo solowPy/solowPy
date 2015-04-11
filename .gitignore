@@ -11,8 +11,11 @@
 *.dta
 
 # ignore egg info
-solowPy.egg-info/
+solowpy.egg-info/
 
 # ignore compiled objects
 build/
 dist/
+
+# ignore MANIFEST
+MANIFEST
