@@ -1,12 +1,4 @@
-import os
-
 from distutils.core import setup
-
-
-def read(*paths):
-    """Build a file path from *paths* and return the contents."""
-    with open(os.path.join(*paths), 'r') as f:
-        return f.read()
 
 
 DESCRIPTION = ("Library for solving, simulating, and estimating the " +
@@ -35,7 +27,5 @@ setup(
       author_email="david.pugh@maths.ox.ac.uk",
       url='https://github.com/solowPy/solowPy',
       description=DESCRIPTION,
-      long_description=(read('README.md') + '\n\n' +
-                        read('CITATION')),
       classifiers=CLASSIFIERS,
       )
