@@ -21,17 +21,17 @@ Library for solving, simulating, and estimating the `Solow (1956)`_ model of eco
 
 .. _`Solow (1956)`:  http://piketty.pse.ens.fr/files/Solow1956.pdf
 
-Solow (1956)
-============
+Quick summary of Solow (1956)
+=============================
 
-The following summary of the Solow model of economic growth largely follows [Romer (2011)].
+The following summary of the Solow model of economic growth largely follows `Romer (2011)`_.
 
-.. _`Romer (2011)`: 
+.. _`Romer (2011)`: http://highered.mheducation.com/sites/0073511374/index.html
 
 The production function
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The [solow1956] model of economic growth focuses on the behavior of four
+The Solow model of economic growth focuses on the behavior of four
 variables: output, `Y`, capital, `K`, labor, `L`, and knowledge (or technology
 or the "effectiveness of labor"), `A`. At each point in time the economy has
 some amounts of capital, labor, and knowledge that can be combined to produce
