@@ -7,5 +7,3 @@ scipy
 matplotlib
 sympy
 pandas
-quantecon
-
