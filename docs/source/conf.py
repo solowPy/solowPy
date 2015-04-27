@@ -20,6 +20,11 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
+## numpydoc settings
+
+numpydoc_class_members_toctree = False
+numydoc_show_class_members= True
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -30,11 +35,20 @@ import os
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
     'sphinx.ext.doctest',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
+    'sphinx.ext.ifconfig',
+    'sphinx.ext.extlinks',
+    'sphinx.ext.autosummary',
+    'numpydoc',
+    'ipython_directive',
+    'ipython_console_highlighting',
+    'matplotlib.sphinxext.only_directives',
+    'matplotlib.sphinxext.plot_directive',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -92,7 +106,7 @@ exclude_patterns = []
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'tango'
 
 # A list of ignored prefixes for module index sorting.
 #modindex_common_prefix = []
