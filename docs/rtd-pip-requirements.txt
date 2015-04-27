@@ -9,6 +9,3 @@ sympy
 pandas
 quantecon
 numba
-llvmlite
-enum34
-funcsigs
