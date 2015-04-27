@@ -6,10 +6,10 @@ solowPy
 
 .. |Build Status| image:: https://travis-ci.org/solowPy/solowPy.svg?branch=master
    :target: https://travis-ci.org/solowPy/solowPy
-.. |Coverage Status| image:: https://coveralls.io/repos/solowPy/solowPy/badge.svg)
+.. |Coverage Status| image:: https://coveralls.io/repos/solowPy/solowPy/badge.svg
    :target: https://coveralls.io/r/solowPy/solowPy
 .. |Development Status| image:: https://pypip.in/status/solowPy/badge.svg 
-   :target: https://pypi.python.org/pypi/solowPy/)
+   :target: https://pypi.python.org/pypi/solowPy/
 .. |Latest Version| image:: https://pypip.in/version/solowpy/badge.svg
    :target: https://pypi.python.org/pypi/solowPy/
 .. |Downloads| image:: https://pypip.in/download/solowPy/badge.svg
