@@ -6,11 +6,10 @@ Contents:
 ---------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    
    LICENSE
-   solowPy
-
+   modules
 
 Indices and tables
 ==================

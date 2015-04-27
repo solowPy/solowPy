@@ -45,8 +45,8 @@ extensions = [
     'sphinx.ext.extlinks',
     'sphinx.ext.autosummary',
     'numpydoc',
-    'ipython_directive',
-    'ipython_console_highlighting',
+    'IPython.sphinxext.ipython_directive',
+    'IPython.sphinxext.ipython_console_highlighting',
     'matplotlib.sphinxext.only_directives',
     'matplotlib.sphinxext.plot_directive',
 ]
@@ -119,7 +119,7 @@ pygments_style = 'tango'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

@@ -14,7 +14,7 @@ The production function
 
 The [solow1956] model of economic growth focuses on the behavior of four
 variables: output, `Y`, capital, `K`, labor, `L`, and knowledge (or technology
-or the ``effectiveness of labor''), `A`. At each point in time the economy has
+or the "effectiveness of labor"), `A`. At each point in time the economy has
 some amounts of capital, labor, and knowledge that can be combined to produce
 output according to some production function, `F`.
 
@@ -32,10 +32,10 @@ constant rates:
 
 .. math::
 
-    \dot{A}(t) = gA(t)
-    \dot{L}(t) = nL(t)
+    \dot{A}(t) =& gA(t) \\
+    \dot{L}(t) =& nL(t)
 
-where the rate of technological progrss, `g`, and the population growth rate,
+where the rate of technological progress, `g`, and the population growth rate,
 `n`, are exogenous parameters.
 
 Output is divided between consumption and investment. The fraction of output
@@ -49,7 +49,7 @@ stock evolves according to
     \dot{K}(t) = sY(t) - \delta K(t).
 
 Although no restrictions are placed on the rates of technological progress and
-population growth, the sum of `g`, `n`, and :math:`delta` is assumed to be
+population growth, the sum of `g`, `n`, and :math:`\delta` is assumed to be
 positive.
 
 The dynamics of the model
@@ -70,9 +70,6 @@ References
 ==========
 .. [romer2011] D. Romer. *Advanced Macroeconomics, 4th edition*, MacGraw Hill, 2011.
 .. [solow1956] R. Solow. *A contribution to the theory of economic growth*, Quarterly Journal of Economics, 70(1):64-95, 1956.
-
-@author : David R. Pugh
-@date : 2014-11-27
 
 """
 from __future__ import division
@@ -116,7 +113,7 @@ class Model(object):
 
         Parameters
         ----------
-        output : sym.Basic
+        output : sympy.Basic
             Symbolic expression defining the aggregate production function.
         params : dict
             Dictionary of model parameters.
@@ -260,7 +257,7 @@ class Model(object):
         Symbolic expression for the intensive form of aggregate production.
 
         :getter: Return the current intensive production function.
-        :type: sym.Basic
+        :type: sympy.Basic
 
         Notes
         -----
@@ -268,7 +265,7 @@ class Model(object):
         intensive form of the aggregate production function, `F`. Defining
         :math:`c=1/AL` one can write
 
-        ..math::
+        .. math::
 
             F\bigg(\frac{K}{AL}, 1\bigg) = \frac{1}{AL}F(A, K, L)
 
@@ -285,10 +282,9 @@ class Model(object):
         conditions:
 
         .. math::
-            :type: eqnarray
 
-            \lim_{k \rightarrow 0} &=& \infty \\
-            \lim_{k \rightarrow \infty} &=& 0
+            \lim_{k \rightarrow 0} =& \infty \\
+            \lim_{k \rightarrow \infty} =& 0
 
         The [inada1964]_ conditions are sufficient (but not necessary!) to
         ensure that the time path of capital per effective worker does not
@@ -304,8 +300,7 @@ class Model(object):
         r"""
         Initial value problem
 
-        :getter: Return an instance of the ivp.IVP class representing the Solow
-        model.
+        :getter: Return instance of the ivp.IVP class representing the model.
         :type: ivp.IVP
 
         Notes
@@ -332,9 +327,8 @@ class Model(object):
         Symbolic expression for the equation of motion for capital (per unit
         effective labor).
 
-        :getter: Return the current equation of motion for capital (per unit
-        effective labor).
-        :type: sym.Basic
+        :getter: Return the current equation of motion for capital.
+        :type: sympy.Basic
 
         Notes
         -----
@@ -345,12 +339,11 @@ class Model(object):
         chain rule to the time derative of `k`.
 
         .. math::
-            :type: eqnarray
 
             \dot{k}(t) =& \frac{\dot{K}(t)}{A(t)L(t)} - \frac{K(t)}{[A(t)L(t)]^2}\bigg[\dot{A}(t)L(t) + \dot{L}(t)A(t)\bigg] \\
             =& \frac{\dot{K}(t)}{A(t)L(t)} - \bigg(\frac{\dot{A}(t)}{A(t)} + \frac{\dot{L}(t)}{L(t)}\bigg)\frac{K(t)}{A(t)L(t)}
 
-        By definition, math:`k=K/AL`, and by assumption :math:`\dot{A}/A` and
+        By definition, :math:`k=K/AL`, and by assumption :math:`\dot{A}/A` and
         :math:`\dot{L}/L` are `g` and `n` respectively. Aggregate capital stock
         evolves according to
 
@@ -362,7 +355,6 @@ class Model(object):
         motion for capital stock (per unit effective labor).
 
         .. math::
-            :type: eqnarray
 
             \dot{k}(t) =& \frac{sF(K(t), A(t)L(t)) - \delta K(t)}{A(t)L(t)} - (g + n)k(t) \\
             =& \frac{sY(t)}{A(t)L(t)} - (g + n + \delta)k(t) \\
@@ -377,9 +369,8 @@ class Model(object):
         Symbolic expression for the marginal product of capital (per unit
         effective labor).
 
-        :getter: Return the current marginal product of capital (per unit
-        effective labor).
-        :type: sym.Basic
+        :getter: Return the current marginal product of capital.
+        :type: sympy.Basic
 
         Notes
         -----
@@ -401,7 +392,7 @@ class Model(object):
 
         :getter: Return the current aggregate production function.
         :setter: Set a new aggregate production function
-        :type: sym.Basic
+        :type: sympy.Basic
 
         Notes
         -----
@@ -472,7 +463,7 @@ class Model(object):
         of technology.
 
         :getter: Return the symbolic expression.
-        :type: sym.Basic
+        :type: sympy.Basic
 
         """
         return sym.solve(Y - self.output, A)[0]
@@ -489,8 +480,7 @@ class Model(object):
         -----
         The following is a derivation for the speed of convergence :math:`\lambda`:
 
-        .. :math::
-            :type: eqnarray
+        .. math::
 
             \lambda \equiv -\frac{\partial \dot{k}(k(t))}{\partial k(t)}\bigg|_{k(t)=k^*} =& -[sf'(k^*) - (g + n+ \delta)] \\
             =& (g + n+ \delta) - sf'(k^*) \\
@@ -500,7 +490,7 @@ class Model(object):
         where the elasticity of output with respect to capital, $\alpha_K(k)$,
         is defined as
 
-        .. :math::
+        .. math::
 
             \alpha_K(k) = \frac{k'(k)}{f(k)}.
 
@@ -617,12 +607,12 @@ class Model(object):
 
         Parameters
         ----------
-        k : ndarray (float)
+        k : numpy.ndarray (float)
             Capital stock (per unit of effective labor)
 
         Returns
         -------
-        c : ndarray (float)
+        c : numpy.ndarray (float)
             Consumption (per unit of effective labor)
 
         """
@@ -656,12 +646,12 @@ class Model(object):
 
         Parameters
         ----------
-        k : ndarray (float)
+        k : numpy.ndarray (float)
             Capital stock (per unit of effective labor)
 
         Returns
         -------
-        y : ndarray (float)
+        y : numpy.ndarray (float)
             Output (per unit of effective labor)
 
         """
@@ -674,12 +664,12 @@ class Model(object):
 
         Parameters
         ----------
-        k : ndarray (float)
+        k : numpy.ndarray (float)
             Capital stock (per unit of effective labor)
 
         Returns
         -------
-        k_dot : ndarray (float)
+        k_dot : numpy.ndarray (float)
             Time derivative of capital stock (per unit of effective labor).
 
         """
@@ -693,12 +683,12 @@ class Model(object):
 
         Parameters
         ----------
-        k : ndarray (float)
+        k : numpy.ndarray (float)
             Capital stock (per unit of effective labor)
 
         Returns
         -------
-        mpk : ndarray (float)
+        mpk : numpy.ndarray (float)
             Marginal product of capital stock (per unit of effective labor).
 
         """
@@ -801,14 +791,14 @@ class Model(object):
 
         Parameters
         ----------
-        t : ndarray (shape=(T,))
+        t : numpy.ndarray (shape=(T,))
             Array of points at which the solution is desired.
-        k0 : (float)
+        k0 : float
             Initial condition for capital stock (per unit of effective labor)
 
         Returns
         -------
-        linearized_traj : ndarray (shape=t.size, 2)
+        linearized_traj : numpy.ndarray (shape=t.size, 2)
             Array representing the linearized solution trajectory.
 
         """

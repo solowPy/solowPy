@@ -1,8 +1,18 @@
-"""
-Solow model with constant elasticity of substitution (CES) production.
+r"""
+Solow model with constant elasticity of substitution (CES) production:
 
-@author : David R. Pugh
-@date : 2014-12-11
+.. math::
+
+  F(K, AL) = \Bigg[\alpha K^{\rho} + (1 - \alpha) (AL)^{\rho}\Bigg]^{\frac{1}{\rho}}
+
+where :math:`0 \lt \alpha \lt 1` and
+
+.. math::
+
+  \rho=\frac{\sigma-1}{\sigma}
+
+where :math:`-\infty \le \rho \ \le 1` and :math:`0 \le \sigma \le \infty` is
+the elasticity of substitution between capital and effective labor in production.
 
 """
 from __future__ import division
@@ -67,18 +77,18 @@ class CESModel(model.Model):
 
         .. math::
 
-            k^* = \left[\frac{1-\alpha}{\bigg(\frac{g+n+\delta}{s}\bigg)^{\rho}-\alpha}\right]^{\frac{1}{rho}}
+            k^* = \left[\frac{1-\alpha}{\bigg(\frac{g+n+\delta}{s}\bigg)^{\rho}-\alpha}\right]^{\frac{1}{\rho}}
 
         where `s` is the savings rate, :math:`g + n + \delta` is the effective
         depreciation rate, and :math:`\alpha` controls the importance of
         capital stock relative to effective labor in the production of output.
         Finally,
 
-        ..math::
+        .. math::
 
             \rho=\frac{\sigma-1}{\sigma}
 
-        where `:math:`sigma` is the elasticity of substitution between capital
+        where :math:`\sigma` is the elasticity of substitution between capital
         and effective labor in production.
 
         """

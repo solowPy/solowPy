@@ -4,7 +4,7 @@ models directory imports
 objects imported here will live in the `solowpy` namespace
 
 """
-__all__ = ['Model', 'CobbDouglasModel', 'CESModel']
+__all__ = ['model', 'Model', 'CobbDouglasModel', 'CESModel']
 
 from . model import Model
 from . import model

@@ -1,8 +1,11 @@
-"""
-Solow growth model with Cobb-Douglas aggregate production.
+r"""
+Solow growth model with Cobb-Douglas aggregate production:
 
-@author : David R. Pugh
-@date : 2014-11-27
+.. math::
+
+  F(K, AL) = K^{\alpha}(AL)^{1 - \alpha}
+
+where :math:`0 \lt \alpha \lt 1`.
 
 """
 from __future__ import division
