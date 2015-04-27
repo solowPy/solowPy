@@ -7,3 +7,5 @@ scipy
 matplotlib
 sympy
 pandas
+quantecon
+numba
