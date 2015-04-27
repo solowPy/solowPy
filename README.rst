@@ -17,19 +17,23 @@ solowPy
 .. |DOI| image:: https://zenodo.org/badge/doi/10.5281/zenodo.16759.svg
    :target: http://dx.doi.org/10.5281/zenodo.16759
 
-Library for solving, simulating, and estimating the [Solow (1956)](http://piketty.pse.ens.fr/files/Solow1956.pdf) model of economic growth.
+Library for solving, simulating, and estimating the `Solow (1956)`_ model of economic growth.
+
+.. _`Solow (1956)`:  http://piketty.pse.ens.fr/files/Solow1956.pdf
 
 Solow (1956)
 ============
 
 The following summary of the Solow model of economic growth largely follows [Romer (2011)].
 
+.. _`Romer (2011)`: 
+
 The production function
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 The [solow1956] model of economic growth focuses on the behavior of four
 variables: output, `Y`, capital, `K`, labor, `L`, and knowledge (or technology
-or the ``effectiveness of labor''), `A`. At each point in time the economy has
+or the "effectiveness of labor"), `A`. At each point in time the economy has
 some amounts of capital, labor, and knowledge that can be combined to produce
 output according to some production function, `F`.
 
@@ -72,8 +76,13 @@ The dynamics of the model
 
 Because the economy is growing over time (due to exogenous technological
 progress and population growth) it is useful to focus on the behavior of
-capital stock per unit of effective labor, :math:`k\equiv K/AL`. Applying
-the chain rule to the equation of motion for capital stock yields (after a
+capital stock per unit of effective labor
+
+.. math::
+    
+    k\equiv K/AL.
+
+Applying the chain rule to the equation of motion for capital stock yields (after a
 bit of algebra!) an equation of motion for capital stock per unit of effective
 labor.
 
@@ -84,7 +93,7 @@ labor.
 That's it! The Solow model of economic growth reduced to a single non-linear ordinary differential equation.
 
 Installation
-------------
+============
 
 Assuming you have `pip`_ on your computer (as will be the case if you've `installed Anaconda`_) you can install the latest stable release of ``solowPy`` by typing
     
@@ -98,7 +107,7 @@ at a terminal prompt.
 .. _`installed Anaconda`: http://quant-econ.net/getting_started.html#installing-anaconda
 
 Example notebooks
------------------
+=================
 
 There are a number of example notebooks that demonstrate how to use the ``solowPy`` library to solve, simulate, and estimate generic Solow models of economic growth.
 
