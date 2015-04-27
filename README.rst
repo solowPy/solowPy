@@ -80,7 +80,7 @@ capital stock per unit of effective labor
 
 .. math::
     
-    k\equiv K/AL.
+    k \equiv K/AL.
 
 Applying the chain rule to the equation of motion for capital stock yields (after a
 bit of algebra!) an equation of motion for capital stock per unit of effective
