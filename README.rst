@@ -2,7 +2,7 @@
 solowPy
 =======
 
-|Build Status| |Coverage Status| |Development Status| |Downloads| |DOI|
+|Build Status| |Coverage Status| |Development Status| |Latest Version| |Downloads| |DOI|
 
 .. |Build Status| image:: https://travis-ci.org/solowPy/solowPy.svg?branch=master
    :target: https://travis-ci.org/solowPy/solowPy
