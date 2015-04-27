@@ -99,7 +99,7 @@ Assuming you have `pip`_ on your computer (as will be the case if you've `instal
     
 .. code:: bash
 
-    pip install solowPy
+    pip install solowpy
 
 at a terminal prompt.
 
