@@ -14,5 +14,5 @@ numba
 
 # numba has the following additional dependencies
 llvmlite
-# enum34
+enum34
 # funcsigs
