@@ -1,15 +1,10 @@
 # These are the required packages for the solowPy package to build
-Sphinx
-ipython
-numpy
-numpydoc
-scipy
-matplotlib
-sympy
-pandas
-quantecon
-numba
-enum34
-funcsigs
-# numba has the following additional dependencies
-llvmlite
+#Sphinx
+#ipython
+#numpy
+#numpydoc
+#scipy
+#matplotlib
+#sympy
+#pandas
+#quantecon
