@@ -13,6 +13,6 @@ quantecon
 numba
 
 # numba has the following additional dependencies
-# llvmlite
+llvmlite
 # enum34
 # funcsigs
