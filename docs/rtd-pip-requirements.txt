@@ -8,4 +8,11 @@ matplotlib
 sympy
 pandas
 quantecon
+
+# quantecon has numba dependency
 numba
+
+# numba has the following additional dependencies
+llvmlite
+enum34
+funcsigs
