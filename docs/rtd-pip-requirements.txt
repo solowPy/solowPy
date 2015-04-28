@@ -9,8 +9,7 @@ sympy
 pandas
 quantecon
 numba
-
-# enum34
+enum34
 
 # numba has the following additional dependencies
 # llvmlite
