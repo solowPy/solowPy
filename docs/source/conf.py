@@ -15,24 +15,25 @@
 import sys
 import os
 
-# from mock import Mock as MagicMock
+from mock import Mock as MagicMock
 
 
-# class Mock(MagicMock):
-#     @classmethod
-#     def __getattr__(cls, name):
-#             return Mock()
+class Mock(MagicMock):
+    @classmethod
+    def __getattr__(cls, name):
+            return Mock()
 
-# MOCK_MODULES = ['scipy', 'scipy.optimize', 'sympy', 'numpy', 'pandas',
-#                 'quantecon', 'quantecon.ivp', 'matplotlib', 'matplotlib.pyplot']
-# sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+MOCK_MODULES = ['scipy', 'scipy.optimize', 'sympy', 'numpy', 'pandas',
+                'quantecon', 'quantecon.ivp', 'matplotlib', 'matplotlib.pyplot',
+                'numba']
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
-## numpydoc settings
+# numpydoc settings
 
 numpydoc_class_members_toctree = False
 numydoc_show_class_members = True
