@@ -10,7 +10,6 @@ pandas
 quantecon
 numba
 enum34
-
+funcsigs
 # numba has the following additional dependencies
 llvmlite
-# funcsigs
