@@ -10,7 +10,7 @@ solowPy
    :target: https://coveralls.io/r/solowPy/solowPy
 .. |Development Status| image:: https://pypip.in/status/solowPy/badge.svg 
    :target: https://pypi.python.org/pypi/solowPy/
-.. |Latest Version| image:: https://pypip.in/version/solowpy/badge.svg
+.. |Latest Version| image:: https://img.shields.io/pypi/v/solowPy.svg
    :target: https://pypi.python.org/pypi/solowPy/
 .. |Downloads| image:: https://img.shields.io/pypi/dm/solowPy.svg
    :target: https://pypi.python.org/pypi/solowPy/
