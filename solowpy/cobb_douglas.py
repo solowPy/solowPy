@@ -5,7 +5,7 @@ Solow growth model with Cobb-Douglas aggregate production:
 
   F(K, AL) = K^{\alpha}(AL)^{1 - \alpha}
 
-where :math:`0 \lt \alpha \lt 1`.
+where :math:`0 < \alpha < 1`.
 
 """
 from __future__ import division
@@ -82,14 +82,14 @@ class CobbDouglasModel(model.Model):
 
         Parameters
         ----------
-        t : numpy.ndarray (shape=(T,))
+        t : `numpy.ndarray`
             Array of points at which the solution is desired.
         k0 : (float)
             Initial condition for capital stock (per unit of effective labor)
 
         Returns
         -------
-        analytic_traj : ndarray (shape=t.size, 2)
+        analytic_traj : `numpy.ndarray` (shape=t.size, 2)
             Array representing the analytic solution trajectory.
 
         """

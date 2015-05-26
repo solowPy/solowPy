@@ -286,7 +286,7 @@ class Model(object):
             \lim_{k \rightarrow 0} =& \infty \\
             \lim_{k \rightarrow \infty} =& 0
 
-        The [inada1964]_ conditions are sufficient (but not necessary!) to
+        The [inada1964] conditions are sufficient (but not necessary!) to
         ensure that the time path of capital per effective worker does not
         explode.
 
@@ -607,12 +607,12 @@ class Model(object):
 
         Parameters
         ----------
-        k : numpy.ndarray (float)
+        k : `numpy.ndarray` (float)
             Capital stock (per unit of effective labor)
 
         Returns
         -------
-        c : numpy.ndarray (float)
+        c : `numpy.ndarray` (float)
             Consumption (per unit of effective labor)
 
         """
@@ -646,12 +646,12 @@ class Model(object):
 
         Parameters
         ----------
-        k : numpy.ndarray (float)
+        k : `numpy.ndarray` (float)
             Capital stock (per unit of effective labor)
 
         Returns
         -------
-        y : numpy.ndarray (float)
+        y : `numpy.ndarray` (float)
             Output (per unit of effective labor)
 
         """
@@ -664,12 +664,12 @@ class Model(object):
 
         Parameters
         ----------
-        k : numpy.ndarray (float)
+        k : `numpy.ndarray` (float)
             Capital stock (per unit of effective labor)
 
         Returns
         -------
-        k_dot : numpy.ndarray (float)
+        k_dot : `numpy.ndarray` (float)
             Time derivative of capital stock (per unit of effective labor).
 
         """
@@ -683,12 +683,12 @@ class Model(object):
 
         Parameters
         ----------
-        k : numpy.ndarray (float)
+        k : `numpy.ndarray` (float)
             Capital stock (per unit of effective labor)
 
         Returns
         -------
-        mpk : numpy.ndarray (float)
+        mpk : `numpy.ndarray` (float)
             Marginal product of capital stock (per unit of effective labor).
 
         """
@@ -791,14 +791,14 @@ class Model(object):
 
         Parameters
         ----------
-        t : numpy.ndarray (shape=(T,))
+        t : `numpy.ndarray` (shape=(T,))
             Array of points at which the solution is desired.
         k0 : float
             Initial condition for capital stock (per unit of effective labor)
 
         Returns
         -------
-        linearized_traj : numpy.ndarray (shape=t.size, 2)
+        linearized_traj : `numpy.ndarray` (shape=t.size, 2)
             Array representing the linearized solution trajectory.
 
         """

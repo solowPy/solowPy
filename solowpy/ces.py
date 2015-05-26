@@ -5,7 +5,7 @@ Solow model with constant elasticity of substitution (CES) production:
 
   F(K, AL) = \Bigg[\alpha K^{\rho} + (1 - \alpha) (AL)^{\rho}\Bigg]^{\frac{1}{\rho}}
 
-where :math:`0 \lt \alpha \lt 1` and
+where :math:`0 < \alpha < 1` and
 
 .. math::
 
