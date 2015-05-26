@@ -23,9 +23,7 @@ class Mock(MagicMock):
     def __getattr__(cls, name):
             return Mock()
 
-MOCK_MODULES = ['scipy', 'scipy.optimize', 'sympy', 'numpy', 'pandas',
-                'quantecon', 'quantecon.ivp', 'matplotlib', 'matplotlib.pyplot',
-                'numba']
+MOCK_MODULES = ['quantecon', ]
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # If extensions (or modules to document with autodoc) are in another directory,

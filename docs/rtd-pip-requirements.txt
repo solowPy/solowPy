@@ -1,10 +1,10 @@
 # These are the required packages for the solowPy package to build
-#Sphinx
-#ipython
-#numpy
-#numpydoc
-#scipy
-#matplotlib
-#sympy
-#pandas
-#quantecon
+Sphinx
+ipython
+numpy
+numpydoc
+scipy
+matplotlib
+sympy
+pandas
+quantecon
