@@ -423,7 +423,7 @@ class Model(object):
 
     @property
     def params(self):
-        """
+        r"""
         Dictionary of model parameters.
 
         :getter: Return the current dictionary of model parameters.
@@ -435,9 +435,9 @@ class Model(object):
         The following parameters are required:
 
         A0: float
-            Initial level of technology. Must satisfy :math:`A_0 > 0 `.
+            Initial level of technology. Must satisfy :math:`A_0 > 0`.
         L0: float
-            Initial amount of available labor. Must satisfy :math:`L_0 > 0 `.
+            Initial amount of available labor. Must satisfy :math:`L_0 > 0`.
         g : float
             Growth rate of technology.
         n : float
@@ -449,7 +449,7 @@ class Model(object):
             :math:`0 < \delta`.
 
         Although no restrictions are placed on the rates of technological
-        progress and population growth, the sum of `g`, `n`, and :math:`delta`
+        progress and population growth, the sum of `g`, `n`, and :math:`\delta`
         is assumed to be positive. The user mus also specify any additional
         model parameters specific to the chosen aggregate production function.
 
