@@ -12,7 +12,7 @@ solowPy
    :target: https://pypi.python.org/pypi/solowPy/
 .. |Latest Version| image:: https://pypip.in/version/solowpy/badge.svg
    :target: https://pypi.python.org/pypi/solowPy/
-.. |Downloads| image:: https://pypip.in/download/solowPy/badge.svg
+.. |Downloads| image:: https://img.shields.io/pypi/dm/solowPy.svg
    :target: https://pypi.python.org/pypi/solowPy/
 .. |DOI| image:: https://zenodo.org/badge/doi/10.5281/zenodo.16759.svg
    :target: http://dx.doi.org/10.5281/zenodo.16759
