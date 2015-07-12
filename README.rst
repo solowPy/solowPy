@@ -2,12 +2,14 @@
 solowPy
 =======
 
-|Build Status| |Coverage Status| |Latest Version| |Downloads| |DOI|
+|Build Status| |Coverage Status| |Codacy Badge| |Latest Version| |Downloads| |DOI|
 
 .. |Build Status| image:: https://travis-ci.org/solowPy/solowPy.svg?branch=master
    :target: https://travis-ci.org/solowPy/solowPy
 .. |Coverage Status| image:: https://coveralls.io/repos/solowPy/solowPy/badge.svg
    :target: https://coveralls.io/r/solowPy/solowPy
+.. |Codacy Badge| image:: https://www.codacy.com/project/badge/c9d5b9103fce4e16ba3e823b5e908f89)
+   :target: https://www.codacy.com/app/drobert-pugh/solowPy
 .. |Latest Version| image:: https://img.shields.io/pypi/v/solowPy.svg
    :target: https://pypi.python.org/pypi/solowPy/
 .. |Downloads| image:: https://img.shields.io/pypi/dm/solowPy.svg
